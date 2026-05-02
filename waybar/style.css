@@ -1,104 +1,94 @@
-@import 'colors/one-dark.css';
-* {
-  font-family: "Symbols Nerd Font Mono";
-}
-* {
-	border: none;
-	border-radius: 0px;
-	
-	font-weight: bold;
+@import "/home/emperor/.cache/wal/colors-waybar.css";
 
-	min-height: 0;
-	padding: 0;
-	margin: 0;
+* {
+    font-family: 'Radio Canada Big', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 19px;
 }
 
 window#waybar {
-	background: transparent;
+    background-color: transparent;
+    color: @background;
+    margin: 8px;
 }
-
-tooltip {
-	background: @bg0;
-	border: 1px solid @bg3;
-	border-radius: 12px;
-}
-
-tooltip label {
-	color: @fg;
-	padding: 6px;
-}
-
-/* WORKSPACES (FIXED) */
-#workspaces {
-	background-color: @bg0;
-	padding: 5px 3px;
-	margin: 0 0 0 12px;
-	border-radius: 18px;
-	border: 1px solid @bg1;
-	color: @fg;
-}
-
 #workspaces button {
-	padding: 0px 6px;
-	margin: 0px 3px;
-	border-radius: 50px;
-	color: @fg;
-	transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease;
 }
 
 #workspaces button.active {
-	background-color: @blue;
-	color: @bg0;
-	min-width: 50px;
-	font-size: 13px;
+    background-color: #89b4fa;
+    color: #1e1e2e;
 }
 
 #workspaces button:hover {
-	background-color: @purple;
-	color: @bg0;
-	border-radius: 16px;
-	min-width: 50px;
+    background-color: #74c7ec;
 }
 
-#workspaces button.urgent {
-	background-color: @red;
-	color: @bg0;
-	border-radius: 16px;
-	min-width: 50px;
+#workspaces button.active {
+    color: @foreground;
+    background-color: @color4;
 }
 
-/* RIGHT MODULES */
+
+#workspaces {
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 0 5.6px 0 0;
+}
+
+.modules-left {
+    margin-left: 12px;    
+}
+
+.modules-right {
+    margin-right: 12px;   
+}
+
 #battery,
 #pulseaudio,
-#network,
-#clock,
-#custom-notification {
-	font-family: "Symbols Nerd Font Mono";
-
-	background-color: @bg0;
-	padding: 0 15px;
-	margin: 0 0 0 12px;
-	border-radius: 50px;
-	border: 1px solid @bg1;
-}
-
-#clock {
-	color: @blue;
-}
-
-#custom-notification {
-	color: @fg;
-	margin: 0 12px 0 12px;
-}
-
-#pulseaudio {
-	color: @yellow;
+#backlight,
+#custom-weather {
+    color: @color5; /* color5 */
+    background-color: @background; /* background */
+    margin: 0 15px 0 0px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
 #network {
-	color: @purple;
+    color: @color2; /* color2 */
+    background-color: @background; /* background */
+    margin: 0 0px 0 0px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
-#battery {
-	color: @green;
+#clock {
+    color: @color3; /* color3 */
+    background-color: @background; /* background */
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 15px;
+}
+
+#network {
+    color: @color4; /* color4 */
+}
+
+#pulseaudio {
+    color: @color5; /* color5 */
+}
+
+#backlight {
+    color: @color5; /* color5 */
+}
+
+#custom-weather {
+    color: @color4; /* color2 */
+    background-color: @background; /* background */
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#custom-media {
+    color: @color4; /* color2 */
+    background-color: @background; /* background */
+    margin: 0 0px 0 15px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
