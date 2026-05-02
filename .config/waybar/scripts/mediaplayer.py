@@ -7,7 +7,6 @@ import argparse
 import logging
 import sys
 import signal
-import gi
 import json
 import os
 from typing import List
@@ -18,7 +17,6 @@ def signal_handler(sig, frame):
     logger.info("Received signal to stop, exiting")
     sys.stdout.write("\n")
     sys.stdout.flush()
-    # loop.quit()
     sys.exit(0)
 
 
