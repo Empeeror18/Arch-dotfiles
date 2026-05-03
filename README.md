@@ -284,7 +284,7 @@ Inspired by various Arch dotfiles from the community ❤️
 
 
 <p align="center">
-  <a href="https://github.com/yourusername/Arch-dotfiles">
+  <a href="https://github.com/Empeeror18/Arch-dotfiles">
     GitHub Repository
   </a>
 </p>
