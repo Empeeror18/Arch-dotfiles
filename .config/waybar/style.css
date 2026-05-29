@@ -1,5 +1,5 @@
-@import "/home/emperor/.cache/wal/colors-waybar.css";
-
+@import "colors/main-colors.css";
+@import url("/home/emperor/.cache/wal/colors-waybar.css");
 * {
     font-family: 'Radio Canada Big', sans-serif;
     font-weight: bold;
@@ -33,7 +33,7 @@ window#waybar {
 
 #workspaces {
     background-color: rgba(20, 20, 20, 0.8);
-    padding: 0 5.6px 0 0;
+    padding: 0 0 0 0;
 }
 
 .modules-left {
@@ -45,20 +45,25 @@ window#waybar {
 }
 
 #battery,
-#pulseaudio,
+
 #backlight,
-#custom-weather {
-    color: @color5; /* color5 */
-    background-color: @background; /* background */
-    margin: 0 15px 0 0px;
-    padding: 0 15px 0 15px; /* top, right, bottom, left */
+#distro-group {
+  margin: 4px 5px;
+  background-color: rgba(20, 20, 20, 0.8);
+  border-radius: 20px;
+  color: rgb(4, 4, 9);
+}
+
+#custom-distro {
+  color: @primary;
+  padding: 6px 15px 6px 10px;
 }
 
 #network {
     color: @color2; /* color2 */
     background-color: @background; /* background */
     margin: 0 0px 0 0px;
-    padding: 0 15px 0 15px; /* top, right, bottom, left */
+    padding: 0 7px 0 7px; /* top, right, bottom, left */
 }
 
 #clock {
@@ -73,22 +78,87 @@ window#waybar {
 }
 
 #pulseaudio {
-    color: @color5; /* color5 */
+    color: @color4;
+    background-color: @background;
+    border-radius: 50%;
+    padding: 0 15px;
+    
 }
 
 #backlight {
     color: @color5; /* color5 */
 }
 
-#custom-weather {
-    color: @color4; /* color2 */
-    background-color: @background; /* background */
-    padding: 0 15px 0 15px; /* top, right, bottom, left */
+#idle_inhibitor {
+  margin: 4px 5px;
+  padding: 6px 15px 6px 10px;
+  background-color:  rgba(20, 20, 20, 0.8);
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
 }
 
-#custom-media {
-    color: @color4; /* color2 */
-    background-color: @background; /* background */
-    margin: 0 0px 0 15px;
-    padding: 0 15px 0 15px; /* top, right, bottom, left */
+#pulseaudio-slider {
+  margin: 4px 5px;
+  padding: 0 2px;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+#pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 10px;
+  background-color: @outline_variant;
+}
+
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 10px;
+  background-color: @secondary_fixed_dim;
+}
+
+#pulseaudio-slider slider {
+  min-height: 12px;
+  min-width: 12px;
+  margin: -2px 0;
+  border-radius: 100%;
+  background-color: @primary;
+}
+
+#distro-group {
+  margin: 4px 5px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @primary;
+    background-color:  rgba(20, 20, 20, 0.8);
+}
+
+#custom-distro {
+  color: @primary;
+  padding: 6px 15px 6px 10px;
+  background-color:  rgba(20, 20, 20, 0.8);}
+
+#custom-terminal {
+  color: #a6e3a1;
+  padding: 0px 10px;
+}
+
+#custom-code {
+  color: #89b4fa;
+  padding: 0px 10px;
+}
+
+#custom-spotify {
+  color: #1db954;
+  padding: 0px 10px;
+}
+
+
+#power-profiles-daemon,
+#idle_inhibitor {
+  margin: 4px 5px;
+  padding: 6px 15px 6px 10px;
+    background-color:  rgba(20, 20, 20, 0.8);
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
 }
